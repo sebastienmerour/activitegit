@@ -15,7 +15,120 @@
     <title>Mon nouveau site</title>
   </head>
   <body>
+    <header class="container">
     <h1>Mon nouveau site</h1>
     <p>Bonjour, le site ouvrira au printemps 2019 ! Un peu de patience !</p>
+    </header>
+    <main class="container">
+    <p>En attendant l'ouveture du site, devenez membre maintenant :</p>
+    <form action="/action_page.php" autocomplete="on" method="post">
+      <div class="form-group">
+        <fieldset>
+          <legend>Identification :</legend>
+          <div class="row">
+            <div class="col">
+              Prénom :<br>
+              <input autofocus="" class="form-control" name="prenom" placeholder="Entrez votre prénom" size="40" type="text"><br>
+              <div>
+                Nationalité :<br>
+                <input class="form-control" name="nationalite" placeholder="Entrez votre Nationalité" size="40" type="text"><br>
+                <div class="form-check-inline">
+                  Sexe : &nbsp; &nbsp;
+                  <div class="custom-control custom-radio">
+                    <input class="custom-control-input" id="homme" name="gender" type="radio" value="homme"> <label class="custom-control-label" for="homme">Homme</label><br>
+                  </div>&nbsp; &nbsp;
+                  <div class="custom-control custom-radio">
+                    <input class="custom-control-input" id="femme" name="gender" type="radio" value="femme"> <label class="custom-control-label" for="femme">Femme</label><br>
+                  </div>
+                </div>
+                <p></p>
+              </div>
+            </div>
+            <div class="col">
+              Nom :<br>
+              <input class="form-control" name="nom" placeholder="Entrez votre nom" required="" type="text"><br>
+              Date de naissance :<br>
+              <input class="form-control" min="1900-01-01" name="bday" type="date"><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-check-inline">
+                Signes particuliers :&nbsp; &nbsp;
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" id="glasses" name="glasses" type="checkbox" value="glasses"><label class="custom-control-label" for="glasses">Lunettes</label>
+                </div>&nbsp; &nbsp;
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" id="tattoos" name="tattoos" type="checkbox" value="tattoos"><label class="custom-control-label" for="tattoos">Tatouages</label>
+                </div>&nbsp; &nbsp;
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" id="piercings" name="piercings" type="checkbox" value="piercings"><label class="custom-control-label" for="piercings">Piercings</label>
+                </div>&nbsp; &nbsp;
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" id="scars" name="scars" type="checkbox" value="scars"><label class="custom-control-label" for="scars">Cicatrices</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <legend>Localisation :</legend>
+          <div class="row">
+            <div class="col">
+              Adresse :<br>
+              <input autofocus="" class="form-control" name="adresse1" placeholder="Adresse ligne 1" size="40" type="text"><br>
+              <input autofocus="" class="form-control" name="codepostal" placeholder="Code Postal" size="40" type="text"><br>
+              Téléphone :<br>
+              <input class="form-control" name="usrtel" pattern="[1-9]{10}" placeholder="0102030405" type="tel"><br>
+              Site Web :<br>
+              <input class="form-control" name="homepage" placeholder="http://" type="url">
+            </div>
+            <div class="col">
+              <br>
+              <input class="form-control" name="adresse2" placeholder="Adresse ligne 2" type="text"><br>
+              <input class="form-control" name="ville" placeholder="Ville" type="text"><br>
+              E-mail:<br>
+              <input class="form-control" name="email" placeholder="@" type="email">
+            </div>
+          </div>
+          <hr>
+          <legend>Authentification :</legend>
+          <div class="row">
+            <div class="col">
+              Identifiant : <input class="form-control" name="username" placeholder="identifiant" type="text">
+            </div>
+            <div class="col">
+              Mot de passe : <input class="form-control" name="password" type="password"> <small class="form-text text-muted" id="passwordHelpBlock">Votre mot de passe doit contenir entre 8 et 11 caractères, doit contenir au moins 1 lettre, 1 chiffre et 1 caractère spécial.</small>
+            </div>
+          </div>
+          <hr>
+          <legend>Equipement :</legend><br>
+          <select class="form-control form-control-sm custom-select" name="support">
+            <option selected value="choix">
+              Vous utilisez :
+            </option>
+            <option value="pc">
+              Un PC
+            </option>
+            <option value="mobile">
+              Un Mobile
+            </option>
+            <option value="tablette">
+              Une Tablette
+            </option>
+          </select>
+          <hr>
+          <legend>Communication :</legend> Envoyez votre fichier :<br>
+          <div class="custom-file">
+            <input class="custom-file-input" id="customFile" lang="fr" type="file"> <label class="custom-file-label" for="customFile">Joindre un fichier</label>
+          </div>
+          <p></p>Message :<br>
+          <textarea class="form-control" cols="30" name="message" placeholder="Saisissez votre message ici" rows="10"></textarea><br>
+          <div>
+            <input class="btn btn-danger" type="reset" value="Vider le formulaire">&nbsp; &nbsp; <input class="btn btn-primary" type="submit" value="Envoyer">
+          </div>
+        </fieldset>
+      </div>
+    </form>
+</main>
   </body>
 </html>
